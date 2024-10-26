@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<center>
+<div id="texto2"  >Javascript</div>
+<br>
+<button id="boton1">Saludo</button>
+
+</center>
+<script type="text/javascript">
+	function accion1(){
+		document.getElementById("texto1").innerHTML="Pagina Dinamica";
+		document.getElementById("texto1").style.color="red";
+		document.getElementById("texto1").style.fontSize="32px";
+
+	}
+	function accion2(){
+		var cad=document.getElementById("texto1");
+        cad.innerHTML="Hoja de estilo";
+		cad.style.color="blue";
+        cad.style.fontSize="48px";
+	}
+</script>
+<script src="codigo1.js"></script>
+
+</body>
+</html>

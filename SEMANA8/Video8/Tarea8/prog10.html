@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+  <center>
+    <h1>Prestamos </h1>
+    <div class="marco">
+      <form name="fr">
+        <table border=1>
+          <tr>
+            <td>Nombre del cliente</td>
+            <td><input name="tcli"></td>
+          </tr>
+          <tr>
+            <td>seleccione Artefacto</td>
+            <td>
+              <input name="op" type="radio" value="Televisor">Televisor
+              <input name="op" type="radio" value="Refrigeradoras">Refrigeradoras
+              <input name="op" type="radio" value="horno">horno
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2><img name=foto height=200 width=200></td>
+          </tr>
+          <tr>
+            <td>costo</td>
+            <td><input name="tcos"></td>
+          </tr>
+          <tr>
+            <td>Seleccione los meses de pago</td>
+            <td>
+              <input name="opm" type="radio" value="6">6
+              <input name="opm" type="radio" value="12">12
+              <input name="opm" type="radio" value="18">18
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" value="procesar" onclick="calcular()"></td>
+          </tr>
+          <tr>
+            <td><textarea name="salida" rows=5 cols=30></textarea></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </center>
+
+  <script type="text/javascript">
+    function calcular() {
+      let artefacto = document.querySelector('input[name="op"]:checked').value;
+      let meses = parseInt(document.querySelector('input[name="opm"]:checked').value);
+      let costo = parseFloat(document.fr.tcos.value);
+      let interes = 0;
+      let imagen = "";
+      switch (artefacto) {
+        case "Televisor":
+          imagen = "imagen/televisor.jpg";
+          if (meses === 6) {
+            interes = costo * 0.10;
+          } else if (meses === 12) {
+            interes = costo * 0.20;
+          } else if (meses === 18) {
+            interes = costo * 0.30;
+          }
+          break;
+        case "Refrigeradoras":
+          imagen = "imagen/refrigera.jpg";
+          if (meses === 6) {
+            interes = costo * 0.15;
+          } else if (meses === 12) {
+            interes = costo * 0.25;
+          } else if (meses === 18) {
+            interes = costo * 0.35;
+          }
+          break;
+        case "horno":
+          imagen = "imagen/horno.jpg";
+          if (meses === 6) {
+            interes = costo * 0.20;
+          } else if (meses === 12) {
+            interes = costo * 0.30;
+          } else if (meses === 18) {
+            interes = costo * 0.40;
+          }
+          break;
+      }
+      let saldo = costo + interes;
+      let cuota = saldo / meses;
+      document.fr.foto.src = imagen;
+      document.fr.salida.value = "Hola " + document.fr.tcli.value + ", el saldo a pagar es: " + saldo.toFixed(2) + "\n";
+      document.fr.salida.value += "La cuota mensual es: " + cuota.toFixed(2);
+    }
+  </script>
+</body>
+
+</html>

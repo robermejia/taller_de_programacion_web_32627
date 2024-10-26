@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/productos.js"></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <img src="img/logo.png" alt="Logo del Proyecto" class="encabezado__logo">
+        <h1 class="titulo">Nuestros Productos</h1>
+    </header>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li class="menu__item"><a href="index.html" class="menu__enlace">Inicio</a></li>
+            <li class="menu__item">
+                <a href="#" class="menu__enlace">Acerca de nosotros</a>
+                <ul class="submenu">
+                    <li><a href="objetivos.html" class="menu__enlace">Objetivos</a></li>
+                    <li><a href="plant_trabajo.html" class="menu__enlace">Plan de Trabajo</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="servicios.html" class="menu__enlace">Servicios</a></li>
+            <li class="menu__item"><a href="productos.html" class="menu__enlace">Productos</a></li>
+            <li class="menu__item"><a href="contacto.html" class="menu__enlace">Contacto</a></li>
+            <button class="carrito__boton" onclick="abrirCarrito()"><i class="fa-solid fa-cart-shopping"></i></button>
+        </ul>
+        <!-- Botón para abrir el carrito -->
+    </nav>
+
+    <div class="contenedor contenedor--productos">
+        <h2 class="subtitulo">Productos Disponibles</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/productos/laptop.jpg" alt="Laptop HP 15" class="producto__imagen">
+                <h3 class="producto__titulo">Laptop HP 15</h3>
+                <p class="producto__descripcion">Laptop de 15.6" con procesador Intel Core i5, 8GB de RAM y 512GB SSD.</p>
+                <p class="producto__precio">Precio: S/ 2,500.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Laptop HP 15', 2500)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/productos/celular.jpg" alt="Smartphone Samsung Galaxy S21" class="producto__imagen">
+                <h3 class="producto__titulo">Smartphone Samsung Galaxy S21</h3>
+                <p class="producto__descripcion">Smartphone con pantalla de 6.2", 128GB de almacenamiento y cámara triple.</p>
+                <p class="producto__precio">Precio: S/ 3,200.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Samsung Galaxy S21', 3200)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/productos/audifonos.jpg" alt="Audífonos Sony WH-1000XM4" class="producto__imagen">
+                <h3 class="producto__titulo">Audífonos Sony WH-1000XM4</h3>
+                <p class="producto__descripcion">Audífonos inalámbricos con cancelación de ruido y batería de 30 horas.</p>
+                <p class="producto__precio">Precio: S/ 1,200.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Audífonos Sony WH-1000XM4', 1200)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/productos/monitor.jpg" alt="Monitor LG 27UL850" class="producto__imagen">
+                <h3 class="producto__titulo">Monitor LG 27UL850</h3>
+                <p class="producto__descripcion">Monitor 4K UHD de 27", ideal para edición de fotos y videos.</p>
+                <p class="producto__precio">Precio: S/ 1,500.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Monitor LG 27UL850', 1500)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/productos/teclado.jpg" alt="Teclado Mecánico Razer BlackWidow" class="producto__imagen">
+                <h3 class="producto__titulo">Teclado Mecánico Razer BlackWidow</h3>
+                <p class="producto__descripcion">Teclado mecánico RGB con retroiluminación y switches mecánicos.</p>
+                <p class="producto__precio">Precio: S/ 500.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Teclado Mecánico Razer BlackWidow', 500)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/productos/camara.jpg" alt="Cámara Canon EOS M50" class="producto__imagen">
+                <h3 class="producto__titulo">Cámara Canon EOS M50</h3>
+                <p class="producto__descripcion">Cámara sin espejo con lente 15-45mm, ideal para fotografía y video.</p>
+                <p class="producto__precio">Precio: S/ 3,000.00</p>
+                <button class="producto__boton" onclick="agregarAlCarrito('Cámara Canon EOS M50', 3000)">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Modal para el carrito -->
+        <div id="carritoModal" class="modal">
+            <div class="modal__contenido">
+                <span class="modal__cerrar" onclick="cerrarCarrito()">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="listaCarrito"></ul>
+                <p id="totalCarrito"></p>
+                <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="pie-pagina__contenedor">
+            <div class="pie-pagina__seccion">
+                <h3 class="pie-pagina__titulo">Sobre Nosotros</h3>
+                <p class="pie-pagina__texto">Somos una empresa líder en soluciones tecnológicas, comprometida con la innovación y la excelencia en cada proyecto.</p>
+            </div>
+            <div class="pie-pagina__seccion">
+                <h3 class="pie-pagina__titulo">Enlaces Rápidos</h3>
+                <ul class="pie-pagina__lista">
+                    <li><a href="index.html" class="pie-pagina__enlace">Inicio</a></li>
+                    <li><a href="servicios.html" class="pie-pagina__enlace">Servicios</a></li>
+                    <li><a href="objetivos.html" class="pie-pagina__enlace">Objetivos</a></li>
+                    <li><a href="productos.html" class="pie-pagina__enlace">Productos</a></li>
+                    <li><a href="contacto.html" class="pie-pagina__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie-pagina__seccion">
+                <h3 class="pie-pagina__titulo">Contacto</h3>
+                <p class="pie-pagina__texto">Email: info@tuempresa.com</p>
+                <p class="pie-pagina__texto">Teléfono: (123) 456-7890</p>
+                <p class="pie-pagina__texto">Dirección: Calle Principal 123, Ciudad</p>
+            </div>
+            <div class="pie-pagina__seccion">
+                <h3 class="pie-pagina__titulo">Síguenos</h3>
+                <div class="pie-pagina__redes-sociales">
+                    <a href="#" class="pie-pagina__red-social">Facebook</a>
+                    <a href="#" class="pie-pagina__red-social">Twitter</a>
+                    <a href="#" class="pie-pagina__red-social">LinkedIn</a>
+                    <a href="#" class="pie-pagina__red-social">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="pie-pagina__derechos">
+            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

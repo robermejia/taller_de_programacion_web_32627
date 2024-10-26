@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <center>
+        <h1>Ecuacion de segundo grado</h1>
+        <div class="marco">
+            <form name="fr">
+                <table border=1>
+                    <tr>
+                        <td>Ingrese coeficiente A</td>
+                        <td><input name="ta"></td>
+                    </tr>
+                    <tr>
+                        <td>Ingrese Coeficiente B</td>
+                        <td><input name="tb"></td>
+                    </tr>
+                    <tr>
+                        <td>Ingrese Coeficiente C</td>
+                        <td><input name="tc"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="procesar" onclick="calculo()"></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="salida" rows=5 cols=30></textarea></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+    <script type="text/javascript">
+        function calculo() {
+            let a = parseFloat(document.fr.ta.value);
+            let b = parseFloat(document.fr.tb.value);
+            let c = parseFloat(document.fr.tc.value);
+
+            let discriminante = Math.pow(b, 2) - 4 * a * c;
+
+            // Calcular las soluciones
+            let x1, x2;
+            if (discriminante >= 0) {
+                x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                document.fr.salida.value = "Las soluciones son: \n x1 = " + x1 + "\n x2 = " + x2;
+            } else {
+                document.fr.salida.value = "La ecuación no tiene soluciones reales.";
+            }
+        }
+    </script>
+</body>
+
+</html>
