@@ -5,7 +5,6 @@
     <title>Tabla de Pagos de Préstamo</title>
 </head>
 <body>
-
 <!-- Formulario para ingresar el monto del préstamo y los meses -->
 <form method="post">
     <label for="prestamo">Monto del Préstamo:</label>
@@ -18,7 +17,6 @@
     
     <input type="submit" value="Generar Tabla de Pagos">
 </form>
-
 <?php
     // Ejercicio 4: Préstamo
     echo "<h1>Ejercicio 4: Préstamo</h1>";

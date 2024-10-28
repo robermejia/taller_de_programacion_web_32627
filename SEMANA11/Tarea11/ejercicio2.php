@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <?php
     // Ejercicio 2: Notas de alumnos
@@ -39,9 +37,7 @@
     // Filas adicionales para mostrar el total de aprobados y desaprobados con porcentaje
     echo "<tr><td colspan='2'>Nro de Aprobados</td><td colspan='2'>$aprobados ($porcAprobados%)</td></tr>";
     echo "<tr><td colspan='2'>Nro de Desaprobados</td><td colspan='2'>$desaprobados ($porcDesaprobados%)</td></tr>";
-
     echo "</table>";
     ?>
 </body>
-
 </html>

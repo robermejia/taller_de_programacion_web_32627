@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <title>Distancia recorrida por un automóvil</title>
 </head>
-
 <body>
     <?php
     // Ejercicio 5: Automóvil
@@ -26,5 +24,4 @@
     ?>
 
 </body>
-
 </html>
