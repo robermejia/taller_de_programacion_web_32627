@@ -1,83 +1,110 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Distancia recorrida por un automóvil</title>
+    <title>Ejercicio 9</title>
 </head>
 
 <body>
+    <h1>Ejercicio 9</h1>
+    <form method="post" action="">
+        <table>
+            <tr>
+                <td><label for="nombre">Nombre del comprador:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="sueldo">Sueldo:</label></td>
+                <td><input type="number" id="sueldo" name="sueldo" required></td>
+            </tr>
+            <tr>
+                <td><label for="departamento">Tipo de departamento:</label></td>
+                <td>
+                    <select id="departamento" name="departamento" required>
+                        <option value="85">85 mt2</option>
+                        <option value="100">100 mt2</option>
+                        <option value="120">120 mt2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="fecha">Fecha de compra:</label></td>
+                <td><input type="date" id="fecha" name="fecha" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Enviar"></td>
+            </tr>
+        </table>
+    </form>
+
     <?php
-    // Ejercicio 9: Plan de vivienda
-    echo "<h1>Ejercicio 9: Plan de vivienda</h1>";
-
-    // Obtener los datos del usuario
-    echo "<form method='post'>";
-    echo "<label for='nombreComprador'>Nombre del comprador:</label>";
-    echo "<input type='text' id='nombreComprador' name='nombreComprador' required><br>";
-    echo "<label for='sueldo'>Sueldo:</label>";
-    echo "<input type='number' id='sueldo' name='sueldo' required><br>";
-    echo "<label for='tipoDepartamento'>Tipo de departamento:</label>";
-    echo "<select id='tipoDepartamento' name='tipoDepartamento'>";
-    echo "<option value='85'>85 m2</option>";
-    echo "<option value='100'>100 m2</option>";
-    echo "<option value='120'>120 m2</option>";
-    echo "</select><br>";
-    echo "<label for='fechaCompra'>Fecha de compra:</label>";
-    echo "<input type='date' id='fechaCompra' name='fechaCompra' required><br>";
-    echo "<input type='submit' value='Calcular'>";
-    echo "</form>";
-
-    // Función para obtener el costo del departamento
-    function getCosto($area) {
-        switch ($area) {
-            case 85:
-                return 15000;
-            case 100:
-                return 18000;
-            case 120:
-                return 21000;
-        }
-    }
-
-    // Procesar los datos del formulario
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nombreComprador = $_POST["nombreComprador"];
+        $nombre = $_POST["nombre"];
         $sueldo = $_POST["sueldo"];
-        $tipoDepartamento = $_POST["tipoDepartamento"];
-        $fechaCompra = $_POST["fechaCompra"];
+        $departamento = $_POST["departamento"];
+        $fecha = $_POST["fecha"];
 
-        // Validar los datos
+        // Validar datos
         if ($sueldo < 500) {
-            echo "<p>Error: El trabajador debe tener un ingreso mínimo de $500.</p>";
+            echo "<p>El trabajador debe tener un ingreso mínimo de $500.</p>";
         } else {
-            // Calcular la cuota inicial y el pago mensual
-            $cuotaInicial = 0;
-            $pagoMensual = 0;
-            $plazo = 0;
-            if ($sueldo < 1000) {
-                $cuotaInicial = 0.02 * getCosto(intval($tipoDepartamento)); // Corrección: Convertir a número
-                $plazo = 5; // 5 años
-            } else {
-                $cuotaInicial = 0.05 * getCosto(intval($tipoDepartamento)); // Corrección: Convertir a número
-                $plazo = 4; // 4 años
+            // Calcular cuota inicial y pago mensual
+            $costo = 0;
+            if ($departamento == "85") {
+                $costo = 15000;
+            } elseif ($departamento == "100") {
+                $costo = 18000;
+            } elseif ($departamento == "120") {
+                $costo = 21000;
             }
-            $pagoMensual = ($getCosto(intval($tipoDepartamento)) - $cuotaInicial) / ($plazo * 12); // Corrección: Convertir a número
 
-            // Mostrar los resultados
-            echo "<p>Nombre del comprador: $nombreComprador</p>";
-            echo "<p>Sueldo: $$sueldo</p>";
-            echo "<p>Tipo de departamento: $tipoDepartamento m2</p>";
-            echo "<p>Fecha de compra: $fechaCompra</p>";
-            echo "<p>Cuota inicial: $$cuotaInicial</p>";
-            echo "<p>Pago mensual: $$pagoMensual</p>";
+            $cuota_inicial = 0;
+            $pago_mensual = 0;
+            if ($sueldo < 1000) {
+                $cuota_inicial = $costo * 0.02;
+                $pago_mensual = ($costo - $cuota_inicial) / (5 * 12);
+            } else {
+                $cuota_inicial = $costo * 0.05;
+                $pago_mensual = ($costo - $cuota_inicial) / (4 * 12);
+            }
 
-            // Mostrar la tabla de áreas y costos
-            echo "<table border='1'>";
-            echo "<tr><th>Área (m2)</th><th>Costo ($)</th></tr>";
-            echo "<tr><td>85</td><td>15000</td></tr>";
-            echo "<tr><td>100</td><td>18000</td></tr>";
-            echo "<tr><td>120</td><td>21000</td></tr>";
+            // Mostrar tabla de pagos
+            echo "<h2>Calendario de Pagos</h2>";
+            echo "<table>
+            <tr>
+                <th>Costo del departamento</th>
+                <th>Cuota inicial</th>
+                <th>Saldo</th>
+            </tr>
+            <tr>
+                <td>$costo</td>
+                <td>$cuota_inicial</td>
+                <td>" . ($costo - $cuota_inicial) . "</td>
+            </tr>
+            </table>";
+
+                    echo "<table>
+            <tr>
+                <th>Fecha de pago</th>
+                <th>Cuota mensual</th>
+                <th>Saldo</th>
+            </tr>";
+
+            $saldo = $costo - $cuota_inicial;
+            $meses = 0;
+            while ($saldo > 0.01) { // Se compara con 0.01 para evitar errores de redondeo
+                $meses++;
+                $saldoActual = $saldo - $pago_mensual;
+                // Asegurar que el saldo no sea negativo
+                $saldoActual = max(0, $saldoActual);
+                echo "<tr>
+                <td>" . date("Y-m-d", strtotime($fecha . " +" . ($meses - 1) . " month")) . "</td>
+                <td>$pago_mensual</td>
+                <td>$saldoActual</td>
+            </tr>";
+                $saldo = $saldoActual;
+            }
+
             echo "</table>";
         }
     }
