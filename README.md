@@ -4,9 +4,6 @@
 # Enlace a GitHub Pages
 [Curso taller de programación web](https://robermejia.github.io/taller_de_programacion_web_32627/)
 ![página web](https://i.ibb.co/f4sBvLt/Captura-de-pantalla-2024-08-22-173505.png)
-<center>
-<img src="https://i.ibb.co/VjJkQwz/Captura-de-pantalla-2025-01-07-154518.png" style="width: 100% ; aspect-ratio:16/9">
-</center>
 
 ## Grabaciones
 
