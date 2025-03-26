@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<!-- calcular el indice de masa corporal siendo el ic=peso(kg)/estatura^2 (en mts) si 
+	ic<=15 = flaco  si   ic>15 y ic<=22  Normal  y ic>22 gordo que muestre su imagen correspondiente -->
+	<center>
+		<h1>Masa corporal</h1>
+		<div class="marco">
+			<form name="fr">
+				<table border=1>
+					<tr>
+						<td>Ingrese estatura en cms</td>
+						<td><input name="te"></td>
+					</tr>
+					<tr>
+						<td>Ingrese peso en kg</td>
+						<td><input name="tk"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="procesar" onclick="calcular()"></td>
+					</tr>
+					<tr>
+						<td><textarea name="salida" rows=5 cols=30></textarea></td>
+						<td><img name="foto" width=100 height=100></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</center>
+
+	<script type="text/javascript">
+		function calcular() {
+			// Obtener la estatura y el peso
+			let estaturaCms = parseFloat(document.fr.te.value);
+			let pesoKg = parseFloat(document.fr.tk.value);
+
+			// Convertir la estatura a metros
+			let estaturaMts = estaturaCms / 100;
+
+			let imc = pesoKg / Math.pow(estaturaMts, 2);
+
+			let mensaje = "";
+			let imagen = "";
+			if (imc <= 15) {
+				mensaje = "Flaco";
+				imagen = "imagen/flaco.jpg";
+			} else if (imc > 15 && imc <= 22) {
+				mensaje = "Normal";
+				imagen = "imagen/normal.jpg";
+			} else {
+				mensaje = "Gordo";
+				imagen = "imagen/gordo.jpg";
+			}
+
+			// Mostrar el resultado
+			document.fr.salida.value = "Tu IMC es: " + imc.toFixed(2) + "\n" + mensaje;
+			document.fr.foto.src = imagen;
+		}
+	</script>
+</body>
+
+</html>

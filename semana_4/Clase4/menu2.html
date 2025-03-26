@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style type="text/css">
+        #menu {
+            padding: 0px;
+            margin: auto;
+
+        }
+
+        .ulclass {
+            background: #ECECEC;
+
+            width: 100%;
+            position: fixed;
+        }
+
+
+        ul,
+        li {
+            list-style: none;
+
+
+        }
+
+        .ulclass li a {
+            background: #ECECEC;
+            display: block;
+            color: #292929;
+            text-decoration: none;
+            padding: 10px 60px;
+
+            font-size: 30px;
+        }
+
+        .ulclass>li {
+            float: left;
+        }
+
+        .ulclass li a:hover {
+            /*    background-color: #848484;*/
+
+            background: #eca023;
+            color: #7B1C1C;
+        }
+
+        .ulclass li ul {
+            display: none;
+            position: absolute;
+            min-width: 40px;
+        }
+
+        .ulclass li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul class="ulclass">
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="rutas.php">Rutas</a>
+            </li>
+            <li><a href="viajes.php">Viajes</a>
+                <ul>
+                    <li><a href="#">Cajamraca</a></li>
+                    <li><a href="#">Cuzco</a></li>
+                    <li><a href="#">Arequipa</a></li>
+
+                </ul>
+            </li>
+            <li><a href="viajes.php">Choferes</a>
+                <ul>
+                    <li><a href="#">Registro</a></li>
+                    <li><a href="#">Reporte de viajes</a></li>
+                    <li><a href="#">Lista de choferes</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

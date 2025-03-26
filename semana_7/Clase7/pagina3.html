@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .grid {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: 100px 300px 250px;
+      gap: 10px;
+      place-items: center;
+      background: black;
+      border: 1px solid black;
+    }
+
+    .grid div {
+      background: #f4f4f4;
+      padding: 10px;
+      justify-content: center;
+
+    }
+
+    .grid div:hover {
+      border: 1px solid yellow;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .casilla1 {
+      align-self: center;
+
+      grid-column: 1/4;
+    }
+
+    .casilla2 {
+      grid-row: 2/4;
+    }
+
+    .casilla2 img {
+      height: 500px;
+      width: 200px;
+    }
+
+    @media screen and (max-width: 600px) {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .casilla2 img {
+        height: 300px;
+        width: 100px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="grid">
+    <div class="casilla1">
+      <H2> AGENCIA DE TURISMO<H2>
+    </div>
+    <div>
+      <img src="../../SEMANA1/Clase1/seman1/turismo/cuzco.jpg">
+    </div>
+    <div>
+      <img src="../../SEMANA1/Clase1/seman1/turismo/arequipa.jpg">
+    </div>
+    <div class="casilla2">
+      <img src="../../SEMANA1/Clase1/seman1/turismo/chiclayo.jpg">
+    </div>
+    <div>
+      <img src="../../SEMANA1/Clase1/seman1/turismo/tacna.jpg">
+    </div>
+    <div>
+      <h2>Promociones turisticos</h2>
+    </div>
+  </div>
+</body>
+
+</html>

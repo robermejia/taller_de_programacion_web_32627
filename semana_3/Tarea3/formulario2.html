@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>Formulario 2</h1>
+    <h3>Roberto Agustín Mejía Collazos</h3>
+    <ul>
+        <li><a href="formulario1.html">Formulario 1</a></li>
+        <li><a href="formulario2.html">Formulario 2</a></li>
+    </ul> 
+    <form method="post">
+        <fieldset>
+            <legend>Completar</legend>
+            <label for="color2">Elija un color:</label>
+            <input type="color" id="color2" name="color2"><br>
+    
+            <label for="comentarios2">Por favor, escriba aquí:</label>
+            <textarea id="comentarios2" name="comentarios2" rows="4" placeholder="Por favor, escriba aquí..."></textarea>
+    
+            <label for="lenguaje">Lenguaje:</label>
+            <select id="lenguaje" name="lenguaje">
+                <option value="html">HTML</option>
+            </select><br>
+    
+            <label>Elija asignaturas:</label>
+            <input type="checkbox" id="asir" name="asignaturas" value="ASIR">
+            <label for="asir">ASIR</label>
+            <input type="checkbox" id="dam" name="asignaturas" value="DAM">
+            <label for="dam">DAM</label>
+            <input type="checkbox" id="daw" name="asignaturas" value="DAW">
+            <label for="daw">DAW</label>
+        </fieldset>
+        
+    
+        <fieldset>
+            <legend>Rellene las opciones siguientes</legend>
+            <label for="fecha3">Elija una fecha:</label>
+            <input type="date" id="fecha3" name="fecha3">
+    
+            <label for="archivo3">Elija un fichero:</label>
+            <input type="file" id="archivo3" name="archivo3"><br>
+    
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera" size="4">
+                <option value="smir">SMIR</option>
+                <option value="asir">ASIR</option>
+                <option value="dam">DAM</option>
+                <option value="daw">DAW</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+</html>

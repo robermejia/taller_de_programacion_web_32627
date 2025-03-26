@@ -1,0 +1,330 @@
+*{
+	
+	box-sizing: border-box;
+	border-color: black;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: font-family: 'Source Sans Pro', sans-serif;
+	margin: 0px;
+	background: #FFFFFF;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 150;
+	align-items: center;
+	font-family: arial;
+	/*border: 1px solid red;*/
+}
+
+#primero{
+	background: #131313;
+        
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+}
+
+.logo_img{
+	height: 200px;
+	width: 250px;
+	margin-right: 20px;
+}
+
+.nombre_empresa{
+	color: white;
+	font-size: 40px ;
+	text-shadow: 0 0 30px red;
+	
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-weight: 600;
+	padding-right: 50px;
+	padding: 0px 30px;
+	font-size: 20px;
+}
+
+nav a:hover{
+	color: #7B1C1C;
+}
+
+
+#menu {
+	padding: 0px;
+	margin: auto;
+	width: 2000px;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.ulclass{
+	background: #ECECEC;	
+}
+
+.ulclass li a {
+	background: #ECECEC;
+	color: #292929;
+	text-decoration: none;
+	padding: 10px 82px;
+	display: block;
+	font-size: 30px;
+}
+
+.ulclass > li {
+	float: left;
+}
+
+.ulclass li a:hover{
+	background-color: #848484;
+	color: #7B1C1C;
+}
+
+.ulclass li ul{
+	display:none;
+	position: absolute;
+	min-width: 140px;
+}
+.ulclass li:hover > ul {
+	display: block;
+}
+
+
+.secimg {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.sizeimg {
+	width: 2000px;
+	height: 800px;
+}
+
+.tex01 {
+	position: absolute;
+	color: white;
+	top: 470px;
+	left: 160px;
+	font-size: 75px;
+	text-align: center;
+	text-shadow: 0 0 50px #075EED;
+
+}
+
+.tex02 {
+	position: absolute;
+	color: white;
+	top: 870px;
+	right: 160px;
+	font-size: 55px;
+	text-align: center;
+	text-shadow: 0 0 20px #00E93C;
+}
+
+
+
+
+#contenedor {
+	display: flex;
+	color: #black;
+	justify-content: space-between;
+	align-items:center;
+}
+
+.columnas {
+	
+}
+.columnas_item {
+	padding: 0px 20px;
+	align-items: center;
+}
+
+.prod_img {
+	height: 250px;
+	width: 290px;
+	border-radius: 50px;
+}
+
+.columnas-item{
+	padding: 0 20px;
+	text-align: center;
+
+}
+
+.columnass-item{
+	padding: 0 100px;
+	text-align: center;
+
+}
+
+
+
+
+.columnas-items{
+	padding: 0 20px;
+	text-align: center;
+    align-items: center;
+}
+.columnas-itemss{
+	padding: 200px 210px;
+	text-align: left;
+    align-items: center;
+}
+
+
+.columnass{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+
+
+
+
+h2{
+	text-align: center;
+	color: #EE8334;
+}
+
+footer{
+	margin: 0px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 150px;
+}
+
+#ultimo{
+	background: #131313;
+}
+
+.col1{
+	text-align: center;
+	color: #FFFFFF;
+	padding: 20px 20px;
+}
+
+.quienes_somos a{
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 23px;
+}
+
+.quienes_somos a:hover{
+	color: #7B1C1C;
+}
+
+
+/*formulario*/
+form {
+	background-color: #DFE6EF; /*color de fondo de todo el formulario*/
+	width: 60%;
+	padding: 10px ; /*borde relativo a todo el formmulario*/
+	margin: 0 20%;
+	color: black; /*color de texto de todo el form*/
+	text-shadow: 0px 1px 1px #131212; /*fondo de letra*/
+	font-size: 1.2em;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-weight:bold;
+
+}
+
+fieldset{
+	margin-bottom: 15px;
+} 
+legend {
+	margin-bottom: 20px;
+}
+
+form > h1 {
+	text-align: center;
+}
+
+label {
+	width: 100%;
+	display: inline-block;
+}
+ input	{
+ 	width: 100%;
+ 	margin-bottom: 15px;
+ 	padding: 7px 0px;
+ }
+ 
+ .l_dni{
+ 	width: 7.5%;
+ }
+ .in_dni {
+ 	width: 20%;
+ 	margin-right: 15%;
+
+ }
+ .l_tel{
+	width:15%;
+ }
+ .in_tel{
+ 	width: 20%;
+ 	margin-right: 15%;
+ }
+ .in_radio {
+ 	width: 7.5%;
+ }
+
+.l_bcon{
+	width: 30%;
+	margin-left: 10%;
+}
+
+.i_mon{
+	width: 20%;
+	margin-right: 13%;
+}
+.l_scon{
+	width: 30%;
+	margin-left: 11.5%;
+}
+.i_scon {
+	width: 35%;
+}
+.i_det{
+	width: 6%;
+}
+
+textarea {
+	width: 100%;
+	resize: vertical;
+	max-height: 200px;
+}
+.b_enviar {
+	width: 15%;
+	float: right;
+	background-color: #03E77E;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #131212;
+}
+
+.nosotros{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nosotros-item{
+	padding: 0 20px;
+	text-align: center;
+}

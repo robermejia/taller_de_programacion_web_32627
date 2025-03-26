@@ -1,0 +1,12 @@
+p, input {
+    display: inline-block;
+    margin-right: 10px; /* Espacio entre la etiqueta y el input */
+}
+.ejercicios{
+    margin: 0px 10px 50px 10px;
+}
+.resultado {
+    color:blue;
+    font-weight: 900;
+    font-size: 20px;
+} 

@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1D202B;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    gap: 20px; /* Spacing between container elements */
+}
+
+.titulo {
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+.contenedor-conciertos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card .textos {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align text to the bottom */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 10px;
+}
+
+.banner {
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    gap: 10px;
+}
+
+.banner ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center list items horizontally */
+    gap: 10px;
+}
+
+.banner ul li {
+    font-weight: bold;
+}
+
+.banner .boton {
+    background: #FFD600;
+    display: block;
+    width: fit-content; /* Adjust button width dynamically */
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 20px; /* Add padding for better button size */
+    border: none;
+    border-radius: 100px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 900px) {
+    .contenedor-conciertos {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<!-- obtener el perimetro del triangulo y su area aplicar pitagoras h=raiz(a^2+b^2) -->
+	<center>
+		<div class="marco">
+			<form name="fr">
+				<table border=1>
+					<tr>
+						<td>Ingrese base
+						<td><input name="tb">
+					<tr>
+						<td>Ingrese altura
+						<td><input name="ta">
+					<tr>
+						<td><input type="button" value="procesar" onclick="calculo()">
+					<tr>
+						<td colspan=2><textarea name="salida" rows=5 cols=40>
+						</textarea>
+				</table>
+			</form>
+		</div>
+	</center>
+	<script type="text/javascript">
+		function calculo(){
+			b = Number(fr.tb.value);
+			a = Number(fr.ta.value);
+			hp = Math.sqrt(b*b+a*a);
+			ar = b*a/2;
+			fr.salida.value="Hipotenusa: "+ hp.toFixed(2) + "\nArea: " +  ar;
+		}
+	</script>
+</body>
+</html>
+

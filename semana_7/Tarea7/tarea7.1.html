@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 7</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head> 
+<body>
+    <h1>Tarea semana 7</h1>
+    <h2>Alumno: Roberto Agustín Mejía Collazos</h2><br>
+    <div class="ejercicios">
+        <h3>Ejercicio 1 - Terreno</h3>
+        <p>Escriba la longitud de ancho del terreno: </p>
+        <input id="ancho1"><br>
+        <p>Escriba la longitud de largo del terreno: </p>
+        <input id="largo1"><br>
+        <p>Precio por metro cuadrado: </p>
+        <input id="precio1"><br>
+        <input type="button" value="Calcular" onclick="calculoTerreno()"><br>
+        <div class="resultado" id="resultado"></div>
+    </div>
+    <div class="ejercicios">
+        <h3>Ejercicio 2 - Inmobiliaria</h3>
+        <p>NOTA: costo por metro cuadrado es de $50 y monto inicial es de 10%.<br>
+        Ingrese la cantidad de metros cuadrados que desea comprar  </p>
+        <input id="cantidadTerreno"><br>
+        <input type="button" value="Calcular costo inicial" onclick="calculoCuotaInicial()"><br>
+        <div class="resultado" id="resultadoInmobiliaria"></div>
+    
+    </div>
+    <div class="ejercicios">
+        <h3>Ejercicio 3 - Banco</h3>
+        <p>NOTA: Los microcreditos deben ser cancelados en 2 años (24 meses),<br>
+        Monto del prestamos es de 24%, El empresario debe pagar la mitad <br>
+        del préstamo  en 4 cuotas especiales y la otra mitad en 20 cuotas ordinarias.<br>     
+        Escriba el monto del prestamo: </p>
+        <input id="montoPrestamo"><br>
+        <input type="button" value="Calcular montos" onclick="calculoBanco()"><br>
+        <div class="resultado" id="resultadoBanco"></div>
+    </div>
+    
+</body>
+</html>

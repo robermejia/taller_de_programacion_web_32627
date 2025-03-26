@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+</head>
+<body>
+    <h1>Semana 3 - Formularios</h1>
+    <header>
+        <h2>Proceso con formulario</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="pagina1.html">Página 1</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+            <li><a href="pagina2.html">Contactos</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="">Nombre y Apellido: </label>
+                <input type="text" name="nom_ape" placeholder="Solo letras" pattern="[A-Z a-z]+" title="Solo letras" class="texto"><br>
+                <label for="">Número de celular: </label>
+                <input type="text" name="telf" placeholder="Solo números" pattern="[9][0-9]{8}" title="Máximo 9 dígitos y debe comenzar con 9." class="texto"><br>
+                <label for="">Distrito: </label>
+                <select name="dist" id="">
+                    <option value="0">- Elegir -</option>
+                    <option value="1">Comas</option>
+                    <option value="2">Rímac</option>
+                    <option value="3">Callao</option>
+                </select><br>
+                <label for="">Deportes que prácticas: </label>
+                <input type="checkbox" name="ck1">Natación
+                <input type="checkbox" name="ck2">Fútbol
+                <input type="checkbox" name="ck3">Voley <br>
+                <label for="">Sexo: </label>
+                <input type="radio" name="sexo">Másculino
+                <input type="radio" name="sexo">Femenino
+                <label for="">Fecha de nacimiento: </label>
+                <input type="date" name="fec"><br>
+                <label for="">Edad: </label>
+                <input type="number" min="18" max="80" name="edad" placeholder="18 - 80"><br>
+                <label for="">Comentario</label>
+                <textarea name="comen" rows="4" cols="30" placeholder="Escribe tu comentario."></textarea><br>
+                <input type="submit" value="Envio">
+                <input type="reset" value="Limpiar">
+            </fieldset>
+        </form>
+    <footer>
+        <p> &REG;Copyright Roberto Agustín Mejía Collazos</p>
+    </footer>    
+
+
+    </main>
+</body>
+</html>

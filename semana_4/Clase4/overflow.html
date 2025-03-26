@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de overflow: hidden;</title>
+    <style>
+        .contenedor {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            overflow: hidden;
+            border: 2px solid #333;
+        }
+
+        .contenido {
+            width: 300px;
+            height: 150px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="contenido">
+            Este contenido es más grande que xxxxxxx el contenedor y será cortado.
+        </div>
+    </div>
+</body>
+
+</html>

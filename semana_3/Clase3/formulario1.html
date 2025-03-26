@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/estilo1.css">
+</head>
+
+<body>
+	<header>
+		<h2>PROCESO CON FORMULARIOS<h2>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="pagina1.html">Pagina1</a></li>
+			<li><a href="formulario1.html">Formulario</a></li>
+			<li><a href="pagina2.html">Contactos</a></li>
+		</ul>
+	</nav>
+	<main>
+		<form action="" method="post">
+			<fieldset>
+				<legend>Datos Personal</legend>
+				<label>Nombre y Apellido</label>
+				<input type="text" name="apenom" placeholder="solo letras" pattern="[A-Z a-z]+" title="solo letras"
+					class="texto"><br>
+				<label>nro Celular</label>
+				<input type="text" name="fono" placeholder="solo numeros" pattern="[9][0-9]{8}" title="maximo 9 digitos"
+					class="texto">
+				<br>
+				<label>distrito</label>
+				<select name="cbd">
+					<option value="0">--elegir--</option>
+					<option value="1">Comas</option>
+					<option value="2">Rimac</option>
+					<option value="3">Callao</option>
+				</select> <br>
+				<label>Deportes </label>
+				<input type="checkbox" name="ck1">Natacion
+				<input type="checkbox" name="ck2">Voley
+				<input type="checkbox" name="ck3">Futbol
+				<br>
+				<label>Sexo</label>
+				<input type="radio" name="sexo">Masculino
+				<input type="radio" name="sexo">Femenino
+				<br>
+				<label>Fecha de Nac.</label>
+				<input type="date" name="fecna"><br>
+				<label>edad </label>
+				<input type="number" min="18" max="70" name="edad">
+				<br>
+				<label>Comentario</label>
+				<textarea name="comen" rows="4" cols="30"></textarea>
+				<br>
+				<input type="submit" value="envio">
+				<input type="reset" value="limpiar">
+			</fieldset>
+		</form>
+	</main>
+	<footer>
+		<p>&copy Derechos reservados 2024</p>
+	</footer>
+</body>
+
+</html>

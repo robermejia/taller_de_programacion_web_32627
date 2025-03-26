@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title></title>
+</head>
+
+<body>
+      <table>
+            <tr>
+                  <td> Ingrese radio
+                  <td><input id="rad">
+            <tr>
+                  <td> <input type="button" value="calcular" onclick="calculo()">
+            <tr>
+                  <td>
+                        <div id="resul"></div>
+      </table>
+      <script type="text/javascript">
+            function calculo() {
+                  radio = document.getElementById("rad").value;
+                  area = radio * radio * 3.1416;
+                  peri = 2 * radio * 3.1416;
+                  document.getElementById("resul").innerHTML = "el area es :" + area +
+                        "<br> Perimetro :" + peri;
+            }
+      </script>
+</body>
+
+</html>

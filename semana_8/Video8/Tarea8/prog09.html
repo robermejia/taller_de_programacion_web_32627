@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <!-- seleccione el departamento muestre su imagen y su precio , luego seleccione el tipo de pasajero
+estudante, ni�o o adulto siendo el descuento 30%, 50% y 0 respectivamente -->
+    <center>
+        <h1>Prestamos </h1>
+        <div class="marco">
+            <form name="fr">
+                <table border=1>
+                    <tr>
+                        <td>nombre del pasajero</td>
+                        <td><input name="tnom"></td>
+                    </tr>
+                    <tr>
+                        <td>seleccione mes</td>
+                        <td><select name="cbd" onchange="cambia()">
+                                <option value=0>elegir</option>
+                                <option value=80>arequipa</option>
+                                <option value=100>cuzco</option>
+                                <option value=70>tacna</option>
+                                <option value=50>ancash</option>
+                                <option value=85>chiclayo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=2 align=center><img name="foto" height=200 width=200></td>
+                    </tr>
+                    <tr>
+                        <td>Costo</td>
+                        <td><input name="tcos"></td>
+                    </tr>
+                    <tr>
+                        <td>tipo de pasajero</td>
+                        <td>
+                            <input name="op" type="radio" value="Estudiante">Estudiante
+                            <input name="op" type="radio" value="Niño">Niño
+                            <input name="op" type="radio" value="Adulto">Adulto
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="procesar" onclick="calcular()"></td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="salida" rows=5 cols=30></textarea></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+    <script type="text/javascript">
+        function cambia() {
+            let departamento = document.fr.cbd.value;
+            let imagen = "";
+            let precio = 0;
+            switch (departamento) {
+                case "80":
+                    imagen = "imagen/AREQUIPA.jpg";
+                    precio = 80;
+                    break;
+                case "100":
+                    imagen = "imagen/CUZCO.jpg";
+                    precio = 100;
+                    break;
+                case "70":
+                    imagen = "imagen/TACNA.jpg";
+                    precio = 70;
+                    break;
+                case "50":
+                    imagen = "imagen/ANCASH.jpg";
+                    precio = 50;
+                    break;
+                case "85":
+                    imagen = "imagen/CHICLAYO.jpg";
+                    precio = 85;
+                    break;
+                default:
+                    imagen = "#";
+                    precio = 0;
+            }
+            document.fr.foto.src = imagen;
+            document.fr.tcos.value = precio;
+        }
+
+        function calcular() {
+            let precioBase = parseFloat(document.fr.tcos.value);
+            let tipoPasajero = document.querySelector('input[name="op"]:checked').value;
+            let descuento = 0;
+            switch (tipoPasajero) {
+                case "Estudiante":
+                    descuento = 0.30;
+                    break;
+                case "Niño":
+                    descuento = 0.50;
+                    break;
+                case "Adulto":
+                    descuento = 0;
+                    break;
+            }
+            let precioFinal = precioBase - (precioBase * descuento);
+            document.fr.salida.value = "Hola " + document.fr.tnom.value + ", el precio final es: " + precioFinal.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

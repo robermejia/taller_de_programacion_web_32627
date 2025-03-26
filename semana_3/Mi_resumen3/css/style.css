@@ -1,0 +1,79 @@
+form {
+    background: #f4f4f4;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 8px 8px 8px black;
+    /*Comentario*/
+}
+
+label {
+    display: inline-block;
+    /*tamaño uniforme*/
+    width: 200px;
+    text-align: right;
+}
+
+.texto {
+    width: 200px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texto:hover {
+    background: blue;
+    color: white;
+}
+
+header {
+    background: #4caf50;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    /*se mantenga fijo  en un scroll*/
+    bottom: 0;
+}
+nav{
+    background: rgb(0, 0, 0, 0.7);
+    color: white;
+    position:relative;
+    width: 100%;
+    display: flex;
+}
+ul{
+    list-style-type: none;
+    display: flex; /*se orienta en forma horizontal*/
+    float: left;
+}
+li{
+    font-size: 18px;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: blue;
+}
+section{
+    float: left; /*Se organiza a la izquierda*/
+    width: 30%;
+    background: lightblue;
+    margin: 0 10px;
+    
+}

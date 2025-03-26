@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>Formulario 1</h1>
+    <h3>Roberto Agustín Mejía Collazos</h3>
+    <ul>
+        <li><a href="formulario1.html">Formulario 1</a></li>
+        <li><a href="formulario2.html">Formulario 2</a></li>
+    </ul> 
+    <form method="post">
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            <label for="fecha">Elija una fecha:</label>
+            <input type="date" id="fecha" name="fecha"><br>
+            
+            <label for="archivo">Elija un fichero:</label>
+            <input type="file" id="archivo" name="archivo"><br>
+    
+            <label>Procesador:</label>
+            <input type="radio" id="amd" name="procesador" value="AMD">
+            <label for="amd">AMD</label>
+            <input type="radio" id="i5" name="procesador" value="Intel i5">
+            <label for="i5">Intel i5</label>
+            <input type="radio" id="i7" name="procesador" value="Intel i7">
+            <label for="i7">Intel i7</label>
+        </fieldset>
+    
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            <input type="radio" id="matematicas" name="asignatura" value="Matemáticas">
+            <label for="matematicas">Matemáticas</label>
+            <input type="radio" id="historia" name="asignatura" value="Historia">
+            <label for="historia">Historia</label>
+            <input type="radio" id="geografia" name="asignatura" value="Geografía">
+            <label for="geografia">Geografía</label>
+            <input type="radio" id="lengua" name="asignatura" value="Lengua">
+            <label for="lengua">Lengua</label><br>
+    
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+    
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos"><br>
+    
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"><br>
+    
+            <label for="color">Elija un color:</label>
+            <input type="color" id="color" name="color"><br>
+    
+            <label for="comentarios">Utilice este cuadro para escribir:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Utilice este cuadro para escribir..."></textarea><br>
+    
+            <label for="fecha2">Elija una fecha:</label>
+            <input type="date" id="fecha2" name="fecha2"><br>
+    
+            <label for="idioma">Idioma:</label>
+            <select id="idioma" name="idioma">
+                <option value="ingles">Inglés</option><br>
+            </select>
+    
+            <label for="hora">Elija una hora:</label>
+            <input type="time" id="hora" name="hora"><br>
+    
+            <label for="archivo2">Elija un fichero:</label>
+            <input type="file" id="archivo2" name="archivo2"><br>
+    
+            <label>Género:</label>
+            <input type="radio" id="mujer" name="genero" value="Mujer">
+            <label for="mujer">Mujer</label>
+            <input type="radio" id="hombre" name="genero" value="Hombre">
+            <label for="hombre">Hombre</label><br>
+        </fieldset>
+    </form>
+</body>
+</html>

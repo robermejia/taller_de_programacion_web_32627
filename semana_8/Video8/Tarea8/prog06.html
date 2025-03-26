@@ -1,0 +1,73 @@
+﻿<html>
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+  <!-- ingrese año de nacimiento muestre  su edad y el mensaje con su imagen correspondiente :
+  edad<=5  bebe  , edad>5 y edad<=!2 nino, edad>12 y edad<18  adolecente , edad>=18 y edad<25 joven,
+edad>25 adulto -->
+  <center>
+    <h1>Datos personales</h1>
+    <div class="marco">
+      <form name="fr">
+        <table border=1>
+          <tr>
+            <td>Ingrese Nombre</td>
+            <td><input name="tnom"></td>
+          </tr>
+          <tr>
+            <td>Ingrese año de nacimiento</td>
+            <td><input name="tan"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="procesar" onclick="proceso()"></td>
+          </tr>
+          <tr>
+            <td><textarea name="salida" rows=5 cols=30></textarea></td>
+            <td><img name="foto" height="100" width="100"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </center>
+  <script type="text/javascript">
+    function proceso() {
+      // Obtener el año actual
+      let añoActual = new Date().getFullYear();
+
+      // Obtener el año de nacimiento
+      let añoNacimiento = parseInt(document.fr.tan.value);
+
+      // Calcular la edad
+      let edad = añoActual - añoNacimiento;
+
+      // Determinar el rango de edad y el mensaje
+      let mensaje = "";
+      let imagen = "";
+      if (edad <= 5) {
+        mensaje = "Bebé";
+        imagen = "imagen/bebe.jpg";
+      } else if (edad > 5 && edad <= 12) {
+        mensaje = "Niño";
+        imagen = "imagen/nino.jpg";
+      } else if (edad > 12 && edad < 18) {
+        mensaje = "Adolescente";
+        imagen = "imagen/adolescente.jpg";
+      } else if (edad >= 18 && edad < 25) {
+        mensaje = "Joven";
+        imagen = "imagen/joven.jpg";
+      } else {
+        mensaje = "Adulto";
+        imagen = "imagen/adulto.jpg";
+      }
+
+      document.fr.salida.value = "Hola " + document.fr.tnom.value + ", naciste " + edad + " . Eres un(a) " + mensaje;
+      document.fr.foto.src = imagen;
+    }
+  </script>
+</body>
+
+</html>
