@@ -13,12 +13,10 @@
 </head>
 
 <body>
-
     <header class="encabezado">
         <img src="img/logo.png" alt="Logo del Proyecto" class="encabezado__logo">
         <h1 class="titulo">Primer Avance del Proyecto | Grupo 3</h1>
     </header>
-
     <nav class="navegacion">
         <ul class="menu">
             <li class="menu__item"><a href="index.html" class="menu__enlace">Inicio</a></li>
@@ -30,30 +28,50 @@
                 </ul>
             </li>
             <li class="menu__item"><a href="servicios.html" class="menu__enlace">Servicios</a></li>
-            <li class="menu__item"><a href="productos.html" class="menu__enlace">Productos</a></li> 
+            <li class="menu__item"><a href="productos.html" class="menu__enlace">Productos</a></li>
             <li class="menu__item"><a href="contacto.html" class="menu__enlace menu__enlace--activo">Contacto</a></li>
             <button class="carrito__boton" onclick="abrirCarrito()"><i class="fa-solid fa-cart-shopping"></i></button>
         </ul>
     </nav>
-
-    <br>
-    <div class="contenedor contenedor--inicio">
-        <div class="intro">
-            <h3 class="subtitulo">Bienvenidos a nuestra Empresa de Software</h3>
-            <p class="texto">Soluciones innovadoras para tus necesidades de software</p>
-        </div>
-
-        <div class="imagen_contenedor">
-            <img src="img/logo.png" alt="Imagen de la empresa" style="max-width: 100%;">
-        </div>
-
-        <div class="seccion-video">
-            <iframe class="seccion-video__iframe" width="560" height="315" src="https://www.youtube.com/embed/fzWzPXEhPvA?si=zfU8nwCiyoXoAc9p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-        <div class="content">
+    <div class="contenedor contenedor--general">
+        <div class="servicios">
             <h2 class="subtitulo">Nuestros Servicios</h2>
-            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero harum ipsa sunt, maiores velit nam itaque iste qui dignissimos quae. Eaque numquam, soluta accusantium qui cumque asperiores blanditiis aspernatur molestiae veritatis quos a voluptas itaque rem. Earum quasi corporis, qui labore laborum odit laboriosam minima ipsa aliquid voluptatum cupiditate! Expedita, enim omnis tempora placeat necessitatibus maiores qui iste similique quibusdam accusamus, eum ea? Consectetur commodi, repellendus veniam amet earum iure reiciendis nobis debitis, quos magnam, deleniti itaque dolores culpa dolorem vel sit animi ipsum voluptas facilis distinctio sed. Laudantium assumenda sed quasi ab consequatur debitis animi accusamus, sequi at cupiditate.</p>
+            <div class="servicios__contenedor">
+                <div class="servicios__fila">
+                    <div class="servicios__columna">
+                        <img src="img/services/agile-teams.svg" alt="Desarrollo Web" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Desarrollo Web</h3>
+                        <p class="texto texto--justificado">Creamos sitios web personalizados y responsivos que se adaptan a las necesidades específicas de tu negocio. Utilizamos las últimas tecnologías para garantizar un rendimiento óptimo y una experiencia de usuario excepcional.</p>
+                    </div>
+                    <div class="servicios__columna">
+                        <img src="img/services/cloud-journey.svg" alt="Aplicaciones Móviles" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Aplicaciones Móviles</h3>
+                        <p class="texto texto--justificado">Desarrollamos aplicaciones móviles intuitivas y funcionales para iOS y Android. Nuestro equipo se enfoca en crear soluciones que mejoren la interacción con tus clientes y optimicen tus procesos de negocio.</p>
+                    </div>
+                    <div class="servicios__columna">
+                        <img src="img/services/cx.svg" alt="Consultoría TI" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Consultoría TI</h3>
+                        <p class="texto texto--justificado">Ofrecemos servicios de consultoría en tecnologías de la información para ayudarte a tomar decisiones estratégicas. Analizamos tu infraestructura actual y recomendamos soluciones que impulsen la eficiencia y el crecimiento de tu empresa.</p>
+                    </div>
+                </div>    
+                <div class="servicios__fila">
+                    <div class="servicios__columna">
+                        <img src="img/services/data-engineering.svg" alt="Ciberseguridad" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Ciberseguridad</h3>
+                        <p class="texto texto--justificado">Protegemos tu negocio contra amenazas cibernéticas con nuestros servicios de seguridad informática. Implementamos soluciones robustas para salvaguardar tus datos y sistemas, garantizando la continuidad de tus operaciones.</p>
+                    </div>
+                    <div class="servicios__columna">
+                        <img src="img/services/DevOps.svg" alt="Inteligencia Artificial" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Inteligencia Artificial</h3>
+                        <p class="texto texto--justificado">Implementamos soluciones de inteligencia artificial y aprendizaje automático para optimizar procesos, analizar datos y mejorar la toma de decisiones en tu empresa. Nuestras soluciones de IA te ayudan a mantenerte a la vanguardia en tu industria.</p>
+                    </div>
+                    <div class="servicios__columna">
+                        <img src="img/services/machine-learning.svg" alt="Cloud Computing" class="servicios__imagen">
+                        <h3 class="servicios__titulo">Cloud Computing</h3>
+                        <p class="texto texto--justificado">Ofrecemos servicios de migración y gestión en la nube para mejorar la escalabilidad, flexibilidad y eficiencia de tus sistemas. Nuestras soluciones de cloud computing te permiten acceder a tus datos y aplicaciones desde cualquier lugar y en cualquier momento.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="pie-pagina">
@@ -92,7 +110,6 @@
             <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
 
 </html>

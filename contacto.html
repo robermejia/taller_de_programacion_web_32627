@@ -11,14 +11,11 @@
         rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-
     <header class="encabezado">
         <img src="img/logo.png" alt="Logo del Proyecto" class="encabezado__logo">
         <h1 class="titulo">Primer Avance del Proyecto | Grupo 3</h1>
     </header>
-
     <nav class="navegacion">
         <ul class="menu">
             <li class="menu__item"><a href="index.html" class="menu__enlace">Inicio</a></li>
@@ -30,31 +27,72 @@
                 </ul>
             </li>
             <li class="menu__item"><a href="servicios.html" class="menu__enlace">Servicios</a></li>
-            <li class="menu__item"><a href="productos.html" class="menu__enlace">Productos</a></li> 
+            <li class="menu__item"><a href="productos.html" class="menu__enlace">Productos</a></li>
             <li class="menu__item"><a href="contacto.html" class="menu__enlace menu__enlace--activo">Contacto</a></li>
             <button class="carrito__boton" onclick="abrirCarrito()"><i class="fa-solid fa-cart-shopping"></i></button>
         </ul>
     </nav>
-
-    <br>
-    <div class="contenedor contenedor--inicio">
-        <div class="intro">
-            <h3 class="subtitulo">Bienvenidos a nuestra Empresa de Software</h3>
-            <p class="texto">Soluciones innovadoras para tus necesidades de software</p>
+    <div class="contacto__titulo">
+        <h4 class="contacto__subtitulo">Integrantes grupo 3</h4>
+    </div>
+    <div class="contacto__contenedor">
+        <div class="tarjeta-contacto">
+            <img src="img/retratos/roberto.jpg" alt="Foto de Contacto 1" class="tarjeta-contacto__imagen">
+            <div class="tarjeta-contacto__info">
+                <h3 class="subtitulo">Roberto Agustín Mejía Collazos</h3>
+                <p class="texto">Carrera: Ing. de Sistemas e Informática</p>
+                <p class="texto">Teléfono: 987-654-3210</p>
+                <p class="texto">Correo electrónico: U23254461@utp.edu.pe</p>
+            </div>
         </div>
 
-        <div class="imagen_contenedor">
-            <img src="img/logo.png" alt="Imagen de la empresa" style="max-width: 100%;">
+        <div class="tarjeta-contacto">
+            <img src="img/retratos/manuel.jpeg" alt="Foto de Contacto 2" class="tarjeta-contacto__imagen">
+            <div class="tarjeta-contacto__info">
+                <h3 class="subtitulo">Manuel Angel Pecho Santos</h3>
+                <p class="texto">Carrera: Ing. de Sistemas e Informática</p>
+                <p class="texto">Teléfono: 987-654-3210</p>
+                <p class="texto">Correo electrónico: U23201694@utp.edu.pe</p>
+            </div>
         </div>
 
-        <div class="seccion-video">
-            <iframe class="seccion-video__iframe" width="560" height="315" src="https://www.youtube.com/embed/fzWzPXEhPvA?si=zfU8nwCiyoXoAc9p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="tarjeta-contacto">
+            <img src="img/retratos/miguel.jpg" alt="Foto de Contacto 3" class="tarjeta-contacto__imagen">
+            <div class="tarjeta-contacto__info">
+                <h3 class="subtitulo">Miguel Angel Velasquez Ysuiza</h3>
+                <p class="texto">Carrera: Ing. de Sistemas e Informática</p>
+                <p class="texto">Teléfono: 111-222-3333</p>
+                <p class="texto">Correo electrónico: U23231519@utp.edu.pe</p>
+            </div>
         </div>
 
-        <div class="content">
-            <h2 class="subtitulo">Nuestros Servicios</h2>
-            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero harum ipsa sunt, maiores velit nam itaque iste qui dignissimos quae. Eaque numquam, soluta accusantium qui cumque asperiores blanditiis aspernatur molestiae veritatis quos a voluptas itaque rem. Earum quasi corporis, qui labore laborum odit laboriosam minima ipsa aliquid voluptatum cupiditate! Expedita, enim omnis tempora placeat necessitatibus maiores qui iste similique quibusdam accusamus, eum ea? Consectetur commodi, repellendus veniam amet earum iure reiciendis nobis debitis, quos magnam, deleniti itaque dolores culpa dolorem vel sit animi ipsum voluptas facilis distinctio sed. Laudantium assumenda sed quasi ab consequatur debitis animi accusamus, sequi at cupiditate.</p>
+        <div class="tarjeta-contacto">
+            <img src="img/retratos/jair.jpeg" alt="Foto de Contacto 4" class="tarjeta-contacto__imagen">
+            <div class="tarjeta-contacto__info">
+                <h3 class="subtitulo">Jair Díaz Ochoa</h3>
+                <p class="texto">Carrera: Ing. de Software</p>
+                <p class="texto">Teléfono: 444-555-6666</p>
+                <p class="texto">Correo electrónico: U21224758@utp.edu.pe</p>
+            </div>
         </div>
+    </div>
+    <div class="contacto__titulo">
+        <h4 class="contacto__subtitulo">Formulario de contacto</h4>
+    </div>
+
+    <div class="formulario__contenedor">
+        <form action="#" method="POST" class="formulario">
+            <label for="nombre" class="formulario__etiqueta">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre" class="formulario__campo">
+
+            <label for="email" class="formulario__etiqueta">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Ingrese su correo" class="formulario__campo">
+
+            <label for="mensaje" class="formulario__etiqueta">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escriba su mensaje." class="formulario__campo"></textarea>
+
+            <button type="submit" class="formulario__boton">Enviar</button>
+        </form>
     </div>
     <footer class="pie-pagina">
         <div class="pie-pagina__contenedor">
@@ -92,7 +130,5 @@
             <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
-
 </html>
